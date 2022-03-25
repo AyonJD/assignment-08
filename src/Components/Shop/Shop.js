@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
+import './Shop.css'
 
 const Shop = () => {
     const [jewelries, setJewelries] = useState([]);
@@ -10,10 +11,14 @@ const Shop = () => {
     }, [])
     // console.log(jewelry);
     return (
-        <div>
-            {
-                jewelries.map(jewelry => <Product key = {jewelry.id} jewelry = {jewelry}></Product>)
-            }
+        <div className='container'>
+            <div className="row grid">
+                
+                {
+                    jewelries.map(jewelry => <Product key = {jewelry.id} jewelry = {jewelry}></Product>)
+                }
+               
+            </div>
         </div>
     );
 };

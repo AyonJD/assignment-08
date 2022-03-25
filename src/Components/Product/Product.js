@@ -1,17 +1,17 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import './Product.css'
 
-const Product = ({jewelry}) => {
-    console.log(jewelry);
+const Product = ({ jewelry }) => {
+    const { img, name, price } = jewelry;
     return (
-        <div className='container'>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
+        <div className="single-card">
+            <Card className='mx-auto'>
+                <img src={img} alt="" />
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>{ name }</Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                        ${price}
                     </Card.Text>
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
