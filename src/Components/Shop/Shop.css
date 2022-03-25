@@ -23,15 +23,38 @@
     background-color: #D58F06;
     color: #fff;
 }
-.group button{
+.group button,
+.order-now
+{
     background-color: #D58F06 !important;
     color: #fff !important;
     font-weight: 600 !important;
 }
-.group button:hover{
+.group button:hover,
+.order-now:hover
+{
     border: 1px solid #D58F06 !important;
     background-color: transparent !important;
     color: #D58F06 !important;
+}
+/* Modal--------------- */
+.modal-image{
+    width: 300px;
+    padding: 20px;
+}
+.cross{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.modal-header{
+    padding-left: 20px;
+}
+.order-now{
+    margin-left: 20px;
 }
 @media only screen and (min-width: 992px){
     .grid{

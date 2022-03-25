@@ -36,10 +36,17 @@ const Shop = () => {
         setJewelryArr(selectedJewelry)
     }
     const draw = array => {
-        const random = Math.floor(Math.random() * array.length)
-        const luckyProductArr = jewelryArr[random]
-        setDrawItem(luckyProductArr)
-        openModal()
+        if (array.length === 0) {
+            return;
+        } else {
+            const random = Math.floor(Math.random() * array.length)
+            const luckyProductArr = jewelryArr[random]
+            setDrawItem(luckyProductArr)
+            openModal()
+        }
+    }
+    const reset = () => {
+        setJewelryArr([])
     }
     
     const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -76,11 +83,14 @@ const Shop = () => {
                                         style={customStyles}
                                         contentLabel="Example Modal">
                                         <ImCross className='cross' onClick={closeModal}></ImCross>
-                                        <h1>modal</h1>
+                                        <img className='modal-image' src={drawItem.img} alt="" />
+                                        <h3 className='modal-header py-0 mb-0'>{drawItem.name}</h3>
+                                        <h4 className='modal-header py-2'>${drawItem.price}</h4>
+                                        <button className='order-now btn my-3' onClick={closeModal}>Order Now</button>
                                     </Modal>
 
                                 <button className='btn w-75 my-3' onClick={() => draw(jewelryArr)}>Lucky Draw</button>
-                                <button className='btn w-75'>Reset</button>
+                                <button className='btn w-75' onClick={reset}>Reset</button>
                             </div>
                         </div>
                     </div>
