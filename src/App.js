@@ -1,10 +1,12 @@
 import './App.css';
 import Shop from './Components/Shop/Shop';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   return (
     <div>
+      <Navbar></Navbar>
       <Shop></Shop>
     </div>
   );

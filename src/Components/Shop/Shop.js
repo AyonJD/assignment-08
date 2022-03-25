@@ -12,12 +12,17 @@ const Shop = () => {
     // console.log(jewelry);
     return (
         <div className='container'>
-            <div className="row grid">
-                
-                {
-                    jewelries.map(jewelry => <Product key = {jewelry.id} jewelry = {jewelry}></Product>)
-                }
-               
+            <div className=" shop-grid">
+                <div className="grid">
+                    {
+                        jewelries.map(jewelry => <Product key = {jewelry.id} jewelry = {jewelry}></Product>)
+                    }
+                </div>
+                <div className="cart">
+                    <div className="sticky">
+                        <h1>cart</h1>
+                    </div>
+                </div>
             </div>
         </div>
     );
