@@ -2,10 +2,28 @@ import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
+import { ImCross } from 'react-icons/im'
+import Modal from 'react-modal';
+
+//Modal styles
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+  
+  Modal.setAppElement('#root');
 
 const Shop = () => {
     const [jewelries, setJewelries] = useState([]);
     const [jewelryArr, setJewelryArr] = useState([]);
+    const [drawItem, setDrawItem] = useState({})
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -17,7 +35,22 @@ const Shop = () => {
         selectedJewelry = [...jewelryArr, props];
         setJewelryArr(selectedJewelry)
     }
-    // console.log(jewelryArr);
+    const draw = array => {
+        const random = Math.floor(Math.random() * array.length)
+        const luckyProductArr = jewelryArr[random]
+        setDrawItem(luckyProductArr)
+        openModal()
+    }
+    
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    //Modal open function
+    function openModal() {
+        setIsOpen(true);
+    }
+    // Modal close function
+    function closeModal() {
+        setIsOpen(false);
+    }
     
     return (
         <div className='container'>
@@ -34,6 +67,21 @@ const Shop = () => {
                             {
                                 jewelryArr.map(jewelry => <Cart key = {jewelry.id} jewelry={ jewelry }></Cart>)
                             }
+                            <div className="text-center group">
+
+                                {/* Modal body-----------------> */}
+                                    <Modal
+                                        isOpen={modalIsOpen}
+                                        onRequestClose={closeModal}
+                                        style={customStyles}
+                                        contentLabel="Example Modal">
+                                        <ImCross className='cross' onClick={closeModal}></ImCross>
+                                        <h1>modal</h1>
+                                    </Modal>
+
+                                <button className='btn w-75 my-3' onClick={() => draw(jewelryArr)}>Lucky Draw</button>
+                                <button className='btn w-75'>Reset</button>
+                            </div>
                         </div>
                     </div>
                 </div>

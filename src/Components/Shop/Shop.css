@@ -23,6 +23,16 @@
     background-color: #D58F06;
     color: #fff;
 }
+.group button{
+    background-color: #D58F06 !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+.group button:hover{
+    border: 1px solid #D58F06 !important;
+    background-color: transparent !important;
+    color: #D58F06 !important;
+}
 @media only screen and (min-width: 992px){
     .grid{
         gap: 25px;

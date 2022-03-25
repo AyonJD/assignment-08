@@ -1,0 +1,14 @@
+.cart-image{
+    width: 40px;
+    border-radius: 50%;
+}
+.cart-info-parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px;
+}
+.delete-icon{
+    font-size: 20px;
+    cursor: pointer;
+}
