@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "price": 220,
+      "img": "bhttps://raw.githubusercontent.com/mir-hussain/guns/main/guns/glock.png",
+      "name": "Geneva"
+    },
+    {
+      "id": 2,
+      "price": 441,
+      "img": "ghttps://raw.githubusercontent.com/mir-hussain/guns/main/guns/glock.png",
+      "name": "Swanson"
+    },
+    {
+      "id": 3,
+      "price": 880,
+      "img": "ghttps://raw.githubusercontent.com/mir-hussain/guns/main/guns/glock.png",
+      "name": "Hood"
+    },
+    {
+      "id": 4,
+      "price": 892,
+      "img": "ghttps://raw.githubusercontent.com/mir-hussain/guns/main/guns/glock.png",
+      "name": "Summer"
+    },
+    {
+      "id": 5,
+      "price": 671,
+      "img": "https://raw.githubusercontent.com/mir-hussain/guns/main/guns/glock.png",
+      "name": "Rachelle"
+    },
+    {
+      "id": 6,
+      "price": 226,
+      "img": "https://raw.githubusercontent.com/mir-hussain/guns/main/guns/glock.png",
+      "name": "Cabrera"
+    },
+    {
+      "id": 7,
+      "price": 447,
+      "img": "bhttps://raw.githubusercontent.com/mir-hussain/guns/main/guns/glock.png",
+      "name": "Rosa"
+    },
+    {
+      "id": 8,
+      "price": 606,
+      "img": "https://raw.githubusercontent.com/mir-hussain/guns/main/guns/glock.png",
+      "name": "Clements"
+    },
+    {
+      "id": 9,
+      "price": 861,
+      "img": "https://raw.githubusercontent.com/mir-hussain/guns/main/guns/glock.png",
+      "name": "Juliet"
+    }
+  ]
