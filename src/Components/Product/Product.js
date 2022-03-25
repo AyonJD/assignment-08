@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import { BsCartPlus } from 'react-icons/bs'
 import './Product.css'
 
-const Product = ({ jewelry }) => {
+const Product = ({ jewelry, handleAdToCart }) => {
     const { img, name, price } = jewelry;
     return (
         <div className="single-card">
@@ -14,7 +14,7 @@ const Product = ({ jewelry }) => {
                     <Card.Text>
                         ${price}
                     </Card.Text>
-                    <button className='button btn'>
+                    <button className='button btn' onClick={() => handleAdToCart(jewelry)}>
                         <p className='btn-text'>Add to Cart</p><BsCartPlus></BsCartPlus>
                     </button>
                 </Card.Body>

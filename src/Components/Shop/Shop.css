@@ -18,6 +18,11 @@
     position: sticky;
     top: 0;
 }
+.summery{
+    padding: 10px 0;
+    background-color: #D58F06;
+    color: #fff;
+}
 @media only screen and (min-width: 992px){
     .grid{
         gap: 25px;
