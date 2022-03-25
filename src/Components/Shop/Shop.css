@@ -67,6 +67,12 @@
         grid-template-columns: 2fr 1fr !important;
     }
 }
+@media only screen and (max-width: 498px){
+    .button-size{
+        font-size: 12px !important;
+        padding: 8px 10px !important;
+    }
+}
 @media only screen and (max-width: 416px){
     .grid{
         gap: 25px;

@@ -89,8 +89,8 @@ const Shop = () => {
                                         <button className='order-now btn my-3' onClick={closeModal}>Order Now</button>
                                     </Modal>
 
-                                <button className='btn w-75 my-3' onClick={() => draw(jewelryArr)}>Lucky Draw</button>
-                                <button className='btn w-75' onClick={reset}>Reset</button>
+                                <button className='btn w-75 my-3 button-size' onClick={() => draw(jewelryArr)}>Lucky Draw</button>
+                                <button className='btn w-75 button-size' onClick={reset}>Reset</button>
                             </div>
                         </div>
                     </div>

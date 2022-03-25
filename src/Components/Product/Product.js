@@ -14,7 +14,7 @@ const Product = ({ jewelry, handleAdToCart }) => {
                     <Card.Text>
                         ${price}
                     </Card.Text>
-                    <button className='button btn' onClick={() => handleAdToCart(jewelry)}>
+                    <button className='button btn button-size' onClick={() => handleAdToCart(jewelry)}>
                         <p className='btn-text'>Add to Cart</p><BsCartPlus></BsCartPlus>
                     </button>
                 </Card.Body>
