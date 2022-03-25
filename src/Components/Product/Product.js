@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { BsCartPlus } from 'react-icons/bs'
 import './Product.css'
 
 const Product = ({ jewelry }) => {
@@ -13,7 +14,9 @@ const Product = ({ jewelry }) => {
                     <Card.Text>
                         ${price}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <button className='button btn'>
+                        <p className='btn-text'>Add to Cart</p><BsCartPlus></BsCartPlus>
+                    </button>
                 </Card.Body>
             </Card>
         </div>

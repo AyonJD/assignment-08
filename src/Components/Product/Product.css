@@ -1,3 +1,19 @@
 .single-card{
     width: 80%;
 }
+.button{
+    display: flex !important;
+    align-items: center;
+    background-color: #D58F06 !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+.button:hover{
+    border: 1px solid #D58F06 !important;
+    background-color: transparent !important;
+    color: #D58F06 !important;
+}
+.btn-text{
+    margin-bottom: 0;
+    margin-right: 7px;
+}

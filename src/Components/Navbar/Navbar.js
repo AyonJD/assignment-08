@@ -4,8 +4,8 @@ import './Navbar.css'
 
 const Navbar = () => {
     return (
-        <div className='text-center'>
-            <img className='w-25' src={logo} alt="" />
+        <div className='text-center mt-2'>
+            <img className='logo' src={logo} alt="" />
         </div>
     );
 };
