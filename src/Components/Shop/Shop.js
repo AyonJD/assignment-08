@@ -75,7 +75,14 @@ const Shop = () => {
             setDrawItem(luckyProductArr)
             openModal()
         }
+    };
+
+    //Handle delete item-------------------->
+    const deleteBtn = props => {
+        const rest = jewelryArr.filter(jewelry => jewelry.id !== props.id)
+        setJewelryArr(rest);
     }
+
     const reset = () => {
         setJewelryArr([])
     }
@@ -103,7 +110,7 @@ const Shop = () => {
                         <h4 className='text-center summery'>Order Summery</h4>
                         <div className="cart-info">
                             {
-                                jewelryArr.map(jewelry => <Cart key = {jewelry.id} jewelry={ jewelry }></Cart>)
+                                jewelryArr.map(jewelry => <Cart key = {jewelry.id} deleteBtn = {deleteBtn} jewelry={ jewelry }></Cart>)
                             }
                             <div className="text-center group">
 
