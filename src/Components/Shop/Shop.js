@@ -4,6 +4,10 @@ import Product from '../Product/Product';
 import './Shop.css'
 import { ImCross } from 'react-icons/im'
 import Modal from 'react-modal';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+
 
 //Modal styles
 const customStyles = {
@@ -23,6 +27,7 @@ const Shop = () => {
     const [jewelries, setJewelries] = useState([]);
     const [jewelryArr, setJewelryArr] = useState([]);
     const [drawItem, setDrawItem] = useState({})
+    const MySwal = withReactContent(Swal)
 
     useEffect(() => {
         fetch('data.json')
@@ -32,8 +37,22 @@ const Shop = () => {
 
     let selectedJewelry = [];
     const handleAdToCart = props => {
-        selectedJewelry = [...jewelryArr, props];
-        setJewelryArr(selectedJewelry)
+        if (jewelryArr.length > 3) {
+            //Sweet alert-------------------------->
+            MySwal.fire({
+                didOpen: () => {
+                  MySwal.clickConfirm()
+                }
+              }).then(() => {
+                return MySwal.fire(<p>Sorry! You can't add more that 4 products...</p>)
+              })
+            // Sweet alert end------------------------------>
+            return;
+        } else {
+            selectedJewelry = [...jewelryArr, props];
+            setJewelryArr(selectedJewelry);
+        }
+        
     }
     const draw = array => {
         //Lucky draw logic----------------->

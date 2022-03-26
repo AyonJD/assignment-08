@@ -55,6 +55,10 @@
 .order-now{
     margin-left: 20px;
 }
+/* Sweet alert */
+.swal2-confirm{
+    background-color: #D58F06 !important;
+}
 @media only screen and (min-width: 992px){
     .grid{
         gap: 25px;
