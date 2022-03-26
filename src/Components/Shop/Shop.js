@@ -7,8 +7,6 @@ import Modal from 'react-modal';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-
-
 //Modal styles
 const customStyles = {
     content: {
@@ -37,7 +35,20 @@ const Shop = () => {
 
     let selectedJewelry = [];
     const handleAdToCart = props => {
-        if (jewelryArr.length > 3) {
+        const exists = jewelryArr.find(jewelry => jewelry.id === props.id);
+        //4 items adding limitation-------------->
+        if (exists) {
+            //Sweet alert-------------------------->
+            MySwal.fire({
+                didOpen: () => {
+                  MySwal.clickConfirm()
+                }
+              }).then(() => {
+                return MySwal.fire(<p>Sorry! You can't add same product twice...</p>)
+              })
+            // Sweet alert end------------------------------>
+            return;
+        } else if (jewelryArr.length > 3) {
             //Sweet alert-------------------------->
             MySwal.fire({
                 didOpen: () => {
