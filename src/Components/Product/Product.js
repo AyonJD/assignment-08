@@ -2,11 +2,18 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { BsCartPlus } from 'react-icons/bs'
 import './Product.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Product = ({ jewelry, handleAdToCart }) => {
     const { img, name, price } = jewelry;
     return (
-        <div className="single-card">
+        <div className="single-card"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        >
             <Card className='mx-auto'>
                 <img src={img} alt="" />
                 <Card.Body>
