@@ -28,7 +28,6 @@
 {
     background-color: #D58F06 !important;
     color: #fff !important;
-    font-weight: 600 !important;
 }
 .group button:hover,
 .order-now:hover
@@ -67,10 +66,21 @@
         grid-template-columns: 2fr 1fr !important;
     }
 }
+@media (max-width: 576px){
+    .container, .container-sm {
+        max-width: 640px !important;
+    }
+    }
 @media only screen and (max-width: 498px){
     .button-size{
         font-size: 12px !important;
         padding: 8px 10px !important;
+    }
+}
+@media only screen and (max-width: 451px){
+    .button-size{
+        font-size: 12px !important;
+        padding: 4px!important;
     }
 }
 @media only screen and (max-width: 416px){
@@ -78,9 +88,16 @@
         gap: 25px;
         grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
     }
+    .summery{
+        font-size: 20px;
+    }
 }
-@media (max-width: 576px){
-.container, .container-sm {
-    max-width: 640px !important;
-}
+
+@media only screen and (max-width: 375px){
+    .group button,
+    .order-now{
+        padding: 4px !important;
+        font-weight: 300 !important;
+        font-size: 11px;
+    }
 }

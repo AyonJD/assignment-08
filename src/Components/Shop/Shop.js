@@ -36,6 +36,7 @@ const Shop = () => {
         setJewelryArr(selectedJewelry)
     }
     const draw = array => {
+        //Lucky draw logic----------------->
         if (array.length === 0) {
             return;
         } else {
@@ -88,9 +89,10 @@ const Shop = () => {
                                         <h4 className='modal-header py-2'>${drawItem.price}</h4>
                                         <button className='order-now btn my-3' onClick={closeModal}>Order Now</button>
                                     </Modal>
-
-                                <button className='btn w-75 my-3 button-size' onClick={() => draw(jewelryArr)}>Lucky Draw</button>
-                                <button className='btn w-75 button-size' onClick={reset}>Reset</button>
+                                    {/* ========================== */}
+                                    {/* Lucky Draw and Reset button */}
+                                    <button className='btn w-75 my-3 button-size' onClick={() => draw(jewelryArr)}>Lucky Draw</button>
+                                    <button className='btn w-75 button-size' onClick={reset}>Reset</button>
                             </div>
                         </div>
                     </div>
