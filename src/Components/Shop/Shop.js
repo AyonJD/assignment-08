@@ -36,7 +36,7 @@ const Shop = () => {
     let selectedJewelry = [];
     const handleAdToCart = props => {
         const exists = jewelryArr.find(jewelry => jewelry.id === props.id);
-        //4 items adding limitation-------------->
+        //double and 4 items adding limitation-------------->
         if (exists) {
             //Sweet alert-------------------------->
             MySwal.fire({
@@ -68,6 +68,15 @@ const Shop = () => {
     const draw = array => {
         //Lucky draw logic----------------->
         if (array.length === 0) {
+            //Sweet alert-------------------------->
+            MySwal.fire({
+                didOpen: () => {
+                  MySwal.clickConfirm()
+                }
+              }).then(() => {
+                return MySwal.fire(<p>Please! add some products.</p>)
+              })
+            // Sweet alert end------------------------------>
             return;
         } else {
             const random = Math.floor(Math.random() * array.length)
@@ -128,7 +137,7 @@ const Shop = () => {
                                     </Modal>
                                     {/* ========================== */}
                                     {/* Lucky Draw and Reset button */}
-                                    <button className='btn w-75 my-3 button-size' onClick={() => draw(jewelryArr)}>Lucky Draw</button>
+                                    <button className='btn w-75 my-3 button-size cart-btn-hover' onClick={() => draw(jewelryArr)}>Lucky Draw</button>
                                     <button className='btn w-75 button-size' onClick={reset}>Reset</button>
                             </div>
                         </div>

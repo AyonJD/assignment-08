@@ -1,8 +1,24 @@
 .logo{
-    width: 250px;
+    width: 120px;
 }
-@media only scree and (max-width: 740px){
+.header{
+    font-size: 50px;
+    color: #fff;
+}
+.header span{
+    color: #D58F06;
+    border-bottom: 2px solid #D58F06;
+}
+@media only screen and (min-width: 740px){
     .logo{
-        width: 200px;
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .logo{
+        width: 90px;
+    }
+    .header{
+        font-size: 30px !important;
     }
 }

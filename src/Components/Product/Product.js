@@ -11,10 +11,10 @@ const Product = ({ jewelry, handleAdToCart }) => {
                 <img src={img} alt="" />
                 <Card.Body>
                     <Card.Title>{ name }</Card.Title>
-                    <Card.Text>
-                        ${price}
+                    <Card.Text className="card-price">
+                        Price: ${price}
                     </Card.Text>
-                    <button className='button btn button-size' onClick={() => handleAdToCart(jewelry)}>
+                    <button className='button btn button-size button-hover' onClick={() => handleAdToCart(jewelry)}>
                         <p className='btn-text'>Add to Cart</p><BsCartPlus></BsCartPlus>
                     </button>
                 </Card.Body>
